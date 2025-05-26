@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" as="image" href="background.webp">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Andre's Sweets</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">Andre's Sweets</a>
+  <button class="nav-toggle" aria-label="Open menu">
+    <span class="hamburger"></span>
+  </button>
+  <nav class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="order.html" class="btn">Order Now</a>
+  </nav>
+</header>
+
+<section id="gallery" class="gallery">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <img src="gallery2.png">
+    <img src="gallery3.png">
+    <img src="gallery4.png">
+    <img src="gallery6.png">
+    <img src="gallery7.png">
+    <img src="gallery8.png">
+    <img src="gallery9.png">
+    <img src="gallery10.png">
+    <img src="gallery11.png">
+    <img src="gallery12.png">
+    <img src="gallery13.png">
+    <img src="gallery14.png">
+    <img src="gallery15.png">
+    <img src="gallery16.png">
+    <img src="gallery17.png">
+    <img src="gallery18.png">
+    <img src="gallery19.png">
+    <img src="gallery20.png">
+    <img src="gallery21.png">
+    <img src="gallery22.png">
+  </div>
+</section>
+
+<footer id="contact">
+  <p>© 2025 Andre's Sweets | <a href="https://www.instagram.com/andrev.sweets/" target="_blank">Instagram</a> | <a href="https://www.facebook.com/p/Andres-Sweets-100057469547301/" target="_blank">Facebook</a></p>
+</footer>
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMobile = document.querySelector('.nav-mobile');
+  navToggle.addEventListener('click', () => {
+    navMobile.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+  });
+  // Optional: close menu when clicking a link
+  navMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    });
+  });
+</script>
+</body>
+</html>
